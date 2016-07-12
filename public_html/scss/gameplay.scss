@@ -1,0 +1,290 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 5, 2016, 3:16:48 PM
+    Author     : TungTD
+*/
+@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
+#wrapper{
+    position: relative;
+    -webkit-touch-callout: none;
+    display: inline-block;
+    @include user-select(none);
+    .button-layer{
+        position: absolute;
+        .line-button{
+            @include filter(brightness(1));
+            &.active{
+                box-shadow: white -1px -1px 1px 1px;
+                @include filter(brightness(1.2));
+            }   
+        }
+    }
+    #button-bar{
+        position: absolute;
+        top : 610px;
+        background: url(../images/bg2.png);
+        background-size: cover;
+        width: 100%;
+        height: 130px;
+        background-repeat: none;
+        #spinButton{
+            width: 245px;
+            height: 116px;
+            background-size: cover;
+            cursor: pointer;
+            top: 7px;
+            position: absolute;
+            left: 975px;
+        }
+        .number{
+            position: absolute;
+            font-size: 30px;
+            line-height: 50px;
+            color: white;
+            top: 14px;
+            width: 100px;
+            text-align: center;
+            font-style: italic;
+            font-weigt: bold;
+            &.lines{
+                left : 150px;
+            }
+            &.bet{
+                left: 330px;
+                width: 125px;
+            }
+            &.total-bet{
+                left: 555px;
+                width: 130px;
+            }
+            &.win{
+                color: #FFC107;
+                left: 760px;
+                width: 180px;
+            }
+        }
+        .button{
+            position: absolute;
+            height: 53px;
+            width: 96px;
+            top: 71px;
+            cursor: pointer;
+            &.plus-lines{
+                left : 158px;
+            }
+            &.decrease-lines{
+                left: 64px;
+            }
+            &.plus-bet{
+                left : 367px;
+            }
+            &.decrease-bet{
+                left : 272px;
+            }
+            &.info{
+                width: 70px;
+                left: 484px;
+            }
+        }
+    }
+    #top{
+        position: absolute;
+        top : 0px;
+        background: url(../images/top.png);
+        background-size: cover;
+        width: 100%;
+        height: 100px;
+        background-repeat: none;
+        div{
+            top: 20px;
+            position: absolute;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            width: 200px;
+            line-height: 60px;
+            &.money{
+                left : 130px;
+            }
+            &.jack-pot{
+                left : 820px;
+            }
+        }
+    }
+    #effect{
+        position: absolute;
+        top : 100px;
+        left : 100px;
+        .money-falling{
+            top: 0px;
+            position: absolute;
+            left : 0px;
+            zoom : 2;
+            display : none;
+            .text-light{
+                position: absolute;
+                top: 0;
+                left: -60px;
+                &.pos-2{
+                    left: 300px;
+                }
+                &.pos-3{
+                    top: -90px;
+                    left: 150px;
+                }
+                &.pos-4{
+                    top: 50px;
+                    left: 50px;
+                }
+                .l-obj {
+                    height: 30px;
+                    width: 30px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    -webkit-animation: text_light 2s infinite linear;
+                    -moz-animation: text_light 2s infinite linear;
+                    animation: text_light 2s infinite linear;
+                    z-index: 6;
+                    &.lobj-1 {
+                        top: 0px;
+                        left: 80px;
+                    }
+                    &.lobj-2 {
+                        top: 0px;
+                        left: 150px;
+                        -webkit-animation-delay: 200ms;
+                        -moz-animation-delay: 200ms;
+                        animation-delay: 200ms;
+                        -webkit-animation-duration: 1s;
+                        -moz-animation-duration: 1s;
+                        animation-duration: 1s;
+                    }
+                    &.lobj-3 {
+                        top: 20px;
+                        left: 80px;
+                        -webkit-animation-delay: 600ms;
+                        -moz-animation-delay: 600ms;
+                        animation-delay: 600ms;
+                    }
+                    &.lobj-4 {
+                        top: 20px;
+                        left: 100px;
+                        -webkit-animation-delay: 150ms;
+                        -moz-animation-delay: 150ms;
+                        animation-delay: 150ms;
+                        -webkit-animation-duration: 900ms;
+                        -moz-animation-duration: 900ms;
+                        animation-duration: 900ms;
+                    }
+                    &.lobj-5 {
+                        top: 20px;
+                        left: 245px;
+                        -webkit-animation-delay: 200ms;
+                        -moz-animation-delay: 200ms;
+                        animation-delay: 200ms;
+                        -webkit-animation-duration: 700ms;
+                        -moz-animation-duration: 700ms;
+                        animation-duration: 700ms;
+                    }
+                    &.lobj-6 {
+                        -webkit-animation-duration: 1500ms;
+                        -moz-animation-duration: 1500ms;
+                        animation-duration: 1500ms;
+                    }
+                    &.lobj-7 {
+                        top: 65px;
+                        left: 170px;
+                        -webkit-animation-delay: 200ms;
+                        -moz-animation-delay: 200ms;
+                        animation-delay: 200ms;
+                    }
+                    &.lobj-8 {
+                        top: 40px;
+                        left: 150px;
+                        -webkit-animation-delay: 400ms;
+                        -moz-animation-delay: 400ms;
+                        animation-delay: 400ms;
+                    }
+                    &:before {
+                        content: ' ';
+                        display: block;
+                        height: 30px;
+                        width: 30px;
+                        -webkit-animation: coin3d 800ms steps(11) infinite;
+                        -moz-animation: coin3d 800ms steps(11) infinite;
+                        animation: coin3d 800ms steps(11) infinite;
+                        background: url(../images/coin.png) no-repeat;
+                    }
+                }
+                @keyframes text_light { 0% { -webkit-transform: translateY(0px) rotate(0deg); -moz-transform: translateY(0px) rotate(0deg); -ms-transform: translateY(0px) rotate(0deg); -o-transform: translateY(0px) rotate(0deg); transform: translateY(0px) rotate(0deg); opacity: 0; }
+                                        20% { opacity: 1; }
+                                        70% { opacity: 1; }
+                                        100% { -webkit-transform: translateY(200px) rotate(360deg); -moz-transform: translateY(200px) rotate(360deg); -ms-transform: translateY(200px) rotate(360deg); -o-transform: translateY(200px) rotate(360deg); transform: translateY(200px) rotate(360deg); opacity: 0; } }
+                }
+                @keyframes coin3d { 100% { background-position: -330px; } }
+            }
+
+            .explorer-pot{
+                height: 293px;
+                width: 600px;
+                background: rgba(0, 0, 0, 0.7);
+                position: absolute;
+                top: 0;
+                left: 0;
+                zoom : 1.745;
+                display : none;
+
+                .effect{
+                    background: url(../images/effects.png) no-repeat;
+                    width: 363px;
+                    height: 364px;
+                    background-position: -1015px -377px;
+                    position: absolute;
+                    top: -30px;
+                    left: 120px;
+                    -webkit-animation: rota 1s infinite linear;
+                    -moz-animation: rota 1s infinite linear;
+                    animation: rota 1s infinite linear;
+                }
+                @keyframes rota { to { -webkit-transform: rotate(360deg); -moz-transform: rotate(360deg); -ms-transform: rotate(360deg); -o-transform: rotate(360deg); transform: rotate(360deg); } }
+                .txt {
+                    background: url(../images/effects.png) no-repeat;
+                    width: 331px;
+                    height: 292px;
+                    background-position: -1405px -0px;
+                    position: absolute;
+                    top: 0;
+                    left: 140px;
+                    opacity: 1;
+                }
+            }
+        }
+
+        .pay-table{
+            position: absolute;
+            top : 0;
+            left: 0;
+            display: none;
+            background-color: rgba(0,0,0,0.3);
+            text-align : center;
+            right : 0;
+            bottom : -16px;
+            .info{
+                width: 888px;
+                height: 590px;
+                margin: 50px auto;
+                display: inline-block;
+                background: url(../images/pay-table.png)
+            }
+        }
+    }
+    #cheater{
+        font-size: 30px;
+        margin-top: 50px;
+        font-weight: bold;
+    }
