@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>SlotMachine</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <!-- bower:css -->
+        <!-- bower installed css files will go here... -->
+        <!-- endinject -->
+        <!-- inject:css -->
+        <!-- built css files will go here... -->
+        <!-- endinject -->
+        <!-- bower:js -->
+        <script src="./lib/jquery-2.1.0.min.js"></script>
+        <script src="./lib/EventEmitter.js"></script>
+        <!-- endinject -->
+    </head>
+    <body >
+        <canvas id="gameplayStage" class="gameCanvas" width="1280" height="720"></canvas>
+       
+        <!-- inject:js -->
+        <script src="./js/service/gameCanvas.js"></script>
+        <script src="./js/service/slotMachineLogic.js"></script>
+        <script src="./js/factory/game.js"></script>
+        <script src="./js/games/slotMachine.js"></script>
+        <script src="./js/main.js"></script>
+        <!-- endinject -->
+    </body>
+</html>

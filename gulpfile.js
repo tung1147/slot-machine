@@ -60,7 +60,7 @@ gulp.task('build-games', function () {
 
 
 gulp.task('build.index', function () {
-    return gulp.src('test.html')
+    return gulp.src('index.html')
          .pipe(inject([
             './public_html/js/service/**/*.js',
             './public_html/js/factory/**/*.js',
