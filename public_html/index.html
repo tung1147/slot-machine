@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>SlotMachine</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="scss/gameplay.css" />
+
+
+        <!-- bower:css -->
+        <!-- bower installed css files will go here... -->
+        <!-- endinject -->
+        <!-- inject:css -->
+        <!-- built css files will go here... -->
+        <!-- endinject -->
+        <!-- bower:js -->
+        <script src="./bower_components/EaselJS/lib/easeljs-0.8.2.min.js"></script>
+        <script src="./bower_components/PreloadJS/lib/preloadjs-0.6.2.min.js"></script>
+        <script src="./bower_components/TweenJS/lib/tweenjs-0.6.2.min.js"></script>
+        <script src="./lib/jquery-2.1.0.min.js"></script>
+        <script src="./lib/EventEmitter.js"></script>
+        <!-- endinject -->
+    </head>
+    <body >
+        <div id="wrapper">
+            <canvas id="gameplayStage" class="gameCanvas" width="1280" height="720"></canvas>
+            <div class="button-layer">
+                <div id="left-column"></div>
+                <div id="right-column"></div>
+            </div>
+            <div id="top">
+                <div class="money"></div>
+                <div class="jack-pot"></div>
+            </div>
+            <div id="button-bar">
+                <div id="spinButton" ></div>
+                <div class="number lines" >100</div>
+                <div class="number bet" >100</div>
+                <div class="number total-bet" >100</div>
+                <div class="number win" >0</div>
+                <div class="button plus-lines" ></div>
+                <div class="button decrease-lines" ></div>
+                <div class="button plus-bet" ></div>
+                <div class="button decrease-bet" ></div>
+                <div class="button info" ></div>
+            </div>
+
+            <div class="pay-table">
+                <div class="info"></div>
+            </div>
+            <div id="effect">
+                <div class="explorer-pot">
+                    <span class="effect"></span>
+                    <span class="txt"></span>
+                </div>
+                <div class="money-falling">
+                    <div class="text-light pos-1">
+                        <i class="l-obj lobj-1"></i>
+                        <i class="l-obj lobj-2"></i>
+                        <i class="l-obj lobj-3"></i>
+                        <i class="l-obj lobj-4"></i>
+                        <i class="l-obj lobj-5"></i>
+                        <i class="l-obj lobj-6"></i>
+                        <i class="l-obj lobj-7"></i>
+                        <i class="l-obj lobj-8"></i>
+                    </div>
+                    <div class="text-light pos-2">
+                        <i class="l-obj lobj-1"></i>
+                        <i class="l-obj lobj-2"></i>
+                        <i class="l-obj lobj-3"></i>
+                        <i class="l-obj lobj-4"></i>
+                        <i class="l-obj lobj-5"></i>
+                        <i class="l-obj lobj-6"></i>
+                        <i class="l-obj lobj-7"></i>
+                        <i class="l-obj lobj-8"></i>
+                    </div>
+                    <div class="text-light pos-3">
+                        <i class="l-obj lobj-1"></i>
+                        <i class="l-obj lobj-2"></i>
+                        <i class="l-obj lobj-3"></i>
+                        <i class="l-obj lobj-4"></i>
+                        <i class="l-obj lobj-5"></i>
+                        <i class="l-obj lobj-6"></i>
+                        <i class="l-obj lobj-7"></i>
+                        <i class="l-obj lobj-8"></i>
+                    </div>
+                    <div class="text-light pos-4">
+                        <i class="l-obj lobj-1"></i>
+                        <i class="l-obj lobj-2"></i>
+                        <i class="l-obj lobj-3"></i>
+                        <i class="l-obj lobj-4"></i>
+                        <i class="l-obj lobj-5"></i>
+                        <i class="l-obj lobj-6"></i>
+                        <i class="l-obj lobj-7"></i>
+                        <i class="l-obj lobj-8"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="cheater">
+            <label>
+                Nỗ hũ 
+                <input type="checkbox" id="explode-pot"/>
+            </label>
+        </div>
+
+        <!-- inject:js -->
+        <script src="./js/service/gameCanvas.js"></script>
+        <script src="./js/service/slotMachineLogic.js"></script>
+        <script src="./js/factory/game.js"></script>
+        <script src="./js/games/slotMachine.js"></script>
+        <script src="./js/main.js"></script>
+        <!-- endinject -->
+    </body>
+</html>

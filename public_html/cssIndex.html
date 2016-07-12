@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>SlotMachine</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="scss/main.css" />
+        <script src="lib.js"></script>
+        <script src="main.js"></script>
+    </head>
+    <body class="wrapper">
+        <div class="inner">
+            <div class="game-center">
+                <div class="col-a">
+
+                    <div class="main-content">
+                        <div class="line-left">
+                            <ul class="line-btn">
+                                <li rel="20"></li>
+                                <li rel="8"></li>
+                                <li rel="2"></li>
+                                <li rel="14"></li>
+                                <li rel="17"></li>
+                                <li rel="7"></li>
+                                <li rel="1"></li>
+                                <li rel="10"></li>
+                                <li rel="23"></li>
+                                <li rel="15"></li>
+                                <li rel="9"></li>
+                                <li rel="3"></li>
+                                <li rel="21"></li>
+                            </ul>
+                            <ul class="line">
+                                <li id="line20" style="display: none;"></li>
+                                <li id="line8" style="display: none;"></li>
+                                <li id="line2" style="display: none;"></li>
+                                <li id="line14" style="display: none;"></li>
+                                <li id="line17" style="display: none;"></li>
+                                <li id="line7" style="display: none;"></li>
+                                <li id="line1" style="display: none;"></li>
+                                <li id="line10" style="display: none;"></li>
+                                <li id="line23" style="display: none;"></li>
+                                <li id="line15" style="display: none;"></li>
+                                <li id="line9" style="display: none;"></li>
+                                <li id="line3" style="display: none;"></li>
+                                <li id="line21" style="display: none;"></li>
+                            </ul>
+                        </div>
+                        <div class="game-play" id="gamePlay">
+                            <div class="column" id="column-1"></div>
+                            <div class="column" id="column-2"></div>
+                            <div class="column" id="column-3"></div>
+                            <div class="column" id="column-4"></div>
+                            <div class="column" id="column-5"></div>
+                        </div>
+                        <div class="popup" style="display: none;">
+                            <div class="popup-ct"><p><b>Thông báo</b></p><p>Bạn cần đăng nhập và chơi thật để sử dụng tính năng này.</p></div>
+                            <button class="gbtn gbtn-close" type="button" onclick="window.SamTruyen.content.hideMessage();"></button>
+                        </div>
+                        <div class="effects" style="display: none">
+                            <div class="money-falling" style="display: none;">
+                                <div class="text-light pos-1">
+                                    <i class="l-obj lobj-1"></i>
+                                    <i class="l-obj lobj-2"></i>
+                                    <i class="l-obj lobj-3"></i>
+                                    <i class="l-obj lobj-4"></i>
+                                    <i class="l-obj lobj-5"></i>
+                                    <i class="l-obj lobj-6"></i>
+                                    <i class="l-obj lobj-7"></i>
+                                    <i class="l-obj lobj-8"></i>
+                                </div>
+                                <div class="text-light pos-2">
+                                    <i class="l-obj lobj-1"></i>
+                                    <i class="l-obj lobj-2"></i>
+                                    <i class="l-obj lobj-3"></i>
+                                    <i class="l-obj lobj-4"></i>
+                                    <i class="l-obj lobj-5"></i>
+                                    <i class="l-obj lobj-6"></i>
+                                    <i class="l-obj lobj-7"></i>
+                                    <i class="l-obj lobj-8"></i>
+                                </div>
+                                <div class="text-light pos-3">
+                                    <i class="l-obj lobj-1"></i>
+                                    <i class="l-obj lobj-2"></i>
+                                    <i class="l-obj lobj-3"></i>
+                                    <i class="l-obj lobj-4"></i>
+                                    <i class="l-obj lobj-5"></i>
+                                    <i class="l-obj lobj-6"></i>
+                                    <i class="l-obj lobj-7"></i>
+                                    <i class="l-obj lobj-8"></i>
+                                </div>
+                                <div class="text-light pos-4">
+                                    <i class="l-obj lobj-1"></i>
+                                    <i class="l-obj lobj-2"></i>
+                                    <i class="l-obj lobj-3"></i>
+                                    <i class="l-obj lobj-4"></i>
+                                    <i class="l-obj lobj-5"></i>
+                                    <i class="l-obj lobj-6"></i>
+                                    <i class="l-obj lobj-7"></i>
+                                    <i class="l-obj lobj-8"></i>
+                                </div>
+                            </div>
+                            <div class="no-hu" style="display: none;color: black;">
+                                <span class="effect"></span>
+                                <span class="txt"></span>
+                            </div>
+                            <div class="thang-lon" style="display: none">
+                                <span class="effect"></span>
+                                <span class="txt"></span>
+                            </div>
+                            <div class="mien-phi" style="display: none">
+                                <span class="after"></span>
+                                <span class="effect"></span>
+                                <span class="txt"></span>
+                            </div>
+                            <div class="kho-bau" style="display: none">
+                                <span class="effect"></span>
+                                <span class="txt"></span>
+                            </div>
+                            <div class="bo-cap" style="display: none">
+                                <span class="effect"></span>
+                                <span class="txt"></span>
+                            </div>
+                        </div>
+                        <div class="money-txt">
+                            <span class="txt-win-money" id="winMoney" style="display: none;">300.000</span>
+                            <span class="txt-foot gfont-string" style="display: none;"></span>
+                            <span class="txt-da-thang-x2" style="display: none;" id="dathangX2">0</span>
+                            <span class="txt-x2" style="display: none;" id="x2">0</span>
+                            <span class="txt-money-bonus" style="display: none;" id="moneyBonus">0</span>
+                            <span class="txt-left" style="display: none;">Dòng 24 thắng 300.000</span>
+                        </div>
+                        <div class="box-content" style="display: none;" id="dthelp">
+                            <div class="huongdan" style="">
+                                <button class="gbtn gbtn-prev" type="button" onclick="window.SamTruyen.content.Back();"></button>
+                                <button class="gbtn gbtn-next" type="button" onclick="window.SamTruyen.content.Next();"></button>
+                                <button class="gbtn gbtn-close" onclick="$('#dthelp').hide();"></button>
+                                <div class="tuts">
+                                    <div id="helpMain" class="hd-3"></div>
+                                </div>
+                            </div>
+                            <div class="khobau" style="display: none">
+                                <button class="gbtn gbtn-close" onclick="$('#dthelp').hide();"></button>
+                            </div>
+                        </div>
+                        <div class="box-content" id="dttrans" style="display: none;"><div class="bx-ct bang-thong-ke">    <button class="gbtn gbtn-close" onclick="$('#dttrans').hide();"></button>    <p class="bx-tit">Bảng thống kê</p>    <ul class="bx-tab-btn">                <li onclick="window.SamTruyen.content.bindRank(1, 2);" class="active"><span>Quỹ</span></li>        <li onclick="window.SamTruyen.content.bindRank(1, 3);"><span>Kho báu</span></li>        <li onclick="window.SamTruyen.content.bindRank(1, 4);"><span>Khác</span></li>    </ul>    <ul class="bx-tabs">        <li class="active">            <table class="bx-tbl" cellspacing="1" cellpadding="0">                <thead>                    <tr>                        <th>Thời gian</th>                        <th>Tài khoản</th>                        <th>Mức đặt</th>                        <th>Thắng</th>                        <th>Mô tả</th>                    </tr>                </thead>                <tbody>                                                                        <tr>                                <td>24/06/2016 16:13:52</td>                                <td>Tuanngatn12</td>                                <td>100</td>                                <td>545.800</td>                                <td>Nổ quỹ</td>                            </tr>                                                    <tr>                                <td>24/06/2016 16:13:19</td>                                <td>tamhp01</td>                                <td>100</td>                                <td>631.200</td>                                <td>Nổ quỹ</td>                            </tr>                                                    <tr>                                <td>24/06/2016 16:12:13</td>                                <td>babeonboard</td>                                <td>1.000</td>                                <td>5.142.000</td>                                <td>Nổ quỹ</td>                            </tr>                                                    <tr>                                <td>24/06/2016 16:11:47</td>                                <td>Lancuoilap3</td>                                <td>100</td>                                <td>547.800</td>                                <td>Nổ quỹ</td>                            </tr>                                                    <tr>                                <td>24/06/2016 16:11:22</td>                                <td>jOhn567</td>                                <td>1.000</td>                                <td>5.607.000</td>                                <td>Nổ quỹ</td>                            </tr>                                                    <tr>                                <td>24/06/2016 16:11:18</td>                                <td>NgocVyyyyyy</td>                                <td>100</td>                                <td>857.200</td>                                <td>Nổ quỹ</td>                            </tr>                                                    <tr>                                <td>24/06/2016 16:06:55</td>                                <td>milu123789</td>                                <td>100</td>                                <td>517.200</td>                                <td>Nổ quỹ</td>                            </tr>                                                    <tr>                                <td>24/06/2016 16:06:47</td>                                <td>Yeuhaiquang</td>                                <td>100</td>                                <td>602.500</td>                                <td>Nổ quỹ</td>                            </tr>                                                    <tr>                                <td>24/06/2016 16:05:53</td>                                <td>HKLGI</td>                                <td>1.000</td>                                <td>5.551.000</td>                                <td>Nổ quỹ</td>                            </tr>                                                    <tr>                                <td>24/06/2016 16:05:33</td>                                <td>kokoMipk</td>                                <td>100</td>                                <td>717.000</td>                                <td>Nổ quỹ</td>                            </tr>                                                            </tbody>            </table>            <p class="pages" id="pager"><div><a href="javascript:;" class="current">1</a><a href="javascript:;">2</a><a href="javascript:;">3</a><a href="javascript:;">4</a><a href="javascript:;">5</a><a href="javascript:;">›</a><a href="javascript:;">»</a></div></p>        </li>    </ul></div></div>
+                        <div class="line-right">
+                            <ul class="line-btn">
+                                <li rel="18"></li>
+                                <li rel="5"></li>
+                                <li rel="12"></li>
+                                <li rel="24"></li>
+                                <li rel="6"></li>
+                                <li rel="22"></li>
+                                <li rel="16"></li>
+                                <li rel="11"></li>
+                                <li rel="19"></li>
+                                <li rel="13"></li>
+                                <li rel="4"></li>
+                                <li rel="25"></li>
+                                <li rel="0"></li>
+                            </ul>
+                            <ul class="line">
+                                <li id="line18" style="display: none;"></li>
+                                <li id="line5" style="display: none;"></li>
+                                <li id="line12" style="display: none;"></li>
+                                <li id="line24" style="display: none;"></li>
+                                <li id="line6" style="display: none;"></li>
+                                <li id="line22" style="display: none;"></li>
+                                <li id="line16" style="display: none;"></li>
+                                <li id="line11" style="display: none;"></li>
+                                <li id="line19" style="display: none;"></li>
+                                <li id="line13" style="display: none;"></li>
+                                <li id="line4" style="display: none;"></li>
+                                <li id="line25" style="display: none;"></li>
+                                <li id="li13" style="display: list-item;"></li>
+                            </ul>
+                        </div>
+                        <div class="auto-st">
+                            <div class="auto-main">
+                                <div class="auto-row row-select-play">
+                                    <div class="row-left">
+                                        <p class="lbauto">Chế độ quay :</p>
+                                        <div class="switch_btn_group">
+                                            <button class="btn-switch active" type="button"><span class="client"></span></button>
+                                            <button class="btn-switch" type="button"><span class="server"></span></button>
+                                        </div>
+                                    </div>
+                                    <div class="row-right">
+                                        <p class="lbauto">Số lượt quay tự động :</p>
+                                        <button class="btn-play-auto auto-10" data-count="10" type="button"></button>
+                                        <button class="btn-play-auto auto-25" data-count="25" type="button"></button>
+                                        <button class="btn-play-auto auto-50" data-count="50" type="button"></button>
+                                        <button class="btn-play-auto auto-100 active" data-count="100" type="button"></button>
+                                        <button class="btn-play-auto auto-200" data-count="200" type="button"></button>
+                                        <button class="btn-play-auto auto-500" data-count="500" type="button"></button>
+                                        <button class="btn-play-auto auto-1000" data-count="1000" type="button"></button>
+                                        <button class="btn-play-auto auto-5000" data-count="5000" type="button"></button>
+                                    </div>
+                                </div>
+                                <div class="auto-row">
+                                    <p class="lbauto">Dừng quay khi :</p>
+                                    <ul class="auto-options">
+                                        <li>
+                                            <i class="checkbox" data-condition="4"></i> <span>Nổ hũ</span>
+                                        </li>
+                                        <li>
+                                            <i class="checkbox" data-condition="3"></i> <span>Nếu 1 lượt quay thắng lớn hơn</span> <div class="input-option"><input type="text" value="0" id="bigwinValue">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <i class="checkbox" data-condition="5"></i> <span>Nếu tài khoản tăng tới</span> <div class="input-option"><input type="text" value="0" id="balanceGreater">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <i class="checkbox" data-condition="6"></i> <span>Nếu tài khoản giảm tới</span> <div class="input-option">
+                                                <input type="text" value="0" id="balanceLess">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="auto-row">
+
+                                    <p class="auto-note">                                <strong>Ghi chú:</strong><br>                                <span style="display:none;">Chế độ quay tự động Server là quay tự động trên hệ thống.<br>Tính năng này giúp bạn không cần online và bật game.</span>                                <span>Chế độ quay tự động Client là quay tự động trên thiết bị của người chơi.<br>Tính năng này sẽ dừng lại khi bạn tắt thiết bị, ngắt kết nối hoặc đăng xuất game.</span>                             </p>
+                                </div>
+                                <div class="auto-buttons">
+                                    <button class="auto-playnow" type="button"></button>
+                                    <button class="auto-close" type="button"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-foot">
+                        <div class="sodong">
+                            <button class="gbtn gbtn-arrow-left" type="button"></button>
+                            <button class="gbtn gbtn-arrow-right" type="button"></button>
+                            <span class="txt-sodong gfont-number">25</span>
+                        </div>
+                        <div class="mucdat">
+                            <button class="gbtn gbtn-arrow-up" type="button"></button>
+                            <button class="gbtn gbtn-arrow-down" type="button"></button>
+                            <span class="txt-mucdat gfont-number">10.000</span>
+                            <span class="txt-tongdat gfont-number">250.000</span>
+                        </div>
+                        <div class="freeticket" id="freeTicket">+0 FREE</div>
+
+                        <button class="gbtn gbtn-quay" type="button" id="quay"></button>
+                        <button class="gbtn gbtn-dung-quay" type="button" style="display: none;">
+                            <span class="che-do-quay client"></span>
+                        </button>
+
+                        <div class="vuathang">
+                            <button class="gbtn gbtn-x2" type="button"></button>
+                            <button class="gbtn-x2-disable" type="button"></button>
+                            <span class="txt-vuathang gfont-number">0</span>
+                        </div>
+                        <div class="tudong">
+                            <button class="gbtn gbtn-arrow-left" type="button"></button>
+                            <button class="gbtn gbtn-arrow-right" type="button"></button>
+                            <span class="txt-tudong gfont-number">100</span>
+                            <div class="btn-tudong">
+                                <button class="gbtn gbtn-tudong" type="button">Quay tự động
+                                    <span class="tooltip">Quay tự động <br> không cần online</span>
+                                </button>
+                                <button class="gbtn gbtn-quaynhanh checked" type="button" style="display: none;">Quay nhanh</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
