@@ -1,0 +1,17 @@
+{
+  "name": "SlotMachine",
+  "version": "1.0.0",
+  "main": "path/to/main.css",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt",
+    "bower_components"
+  ],
+  "dependencies": {
+    "PreloadJS": "^0.6.2",
+    "EaselJS": "^0.8.2",
+    "TweenJS": "^0.6.2",
+    "bourbon": "4.2.7"
+  },
+  "devDependencies": {}
+}

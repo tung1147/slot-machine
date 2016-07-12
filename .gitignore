@@ -1,0 +1,6 @@
+/nbproject/private/
+/.settings
+/nbproject
+/node_modules
+/bower_components
+./src/vendor

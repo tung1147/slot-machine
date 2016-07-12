@@ -1,0 +1,17 @@
+{
+    "name": "SlotMachine",
+    "version": "1.0.0",
+    "keywords": ["util", "functional", "server", "client", "browser"],
+    "author": "TungTD",
+    "contributors": [],
+    "dependencies": {
+        "gulp": "^3.9.0",
+        "gulp-sass": "^2.1.1",
+        "gulp-sourcemaps": "^1.6.0",
+        "gulp-concat": "^2.6.0",
+        "wrappy": "^1.0.2",
+        "gulp-inject": "^4.1.0",
+        "event-stream":"^3.0.5",
+        "slash": "^1.0.0"
+    }
+}
